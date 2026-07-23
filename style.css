@@ -161,3 +161,26 @@ section h2 {
 .review-card span {
     font-size: 22px;
 }
+#contact {
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 600px;
+    margin: auto;
+    background: #fff0f5;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-box h3 {
+    color: #d63384;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    font-size: 18px;
+    margin: 10px 0;
+}
