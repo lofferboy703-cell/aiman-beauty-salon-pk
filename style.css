@@ -134,3 +134,30 @@ section h2 {
     color: #d63384;
     margin-bottom: 10px;
 }
+#reviews {
+    background: #fff0f5;
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    width: 280px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.review-card h3 {
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+.review-card span {
+    font-size: 22px;
+}
