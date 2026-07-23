@@ -1,0 +1,34 @@
+.hero {
+    height: 90vh;
+    background-image: url("images/salon.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.btn {
+    background: #d63384;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+}
