@@ -181,3 +181,151 @@ header{
     transform:translateY(-3px);
 
 }
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about{
+    padding:90px 0;
+    background:#ffffff;
+}
+
+.about h2{
+    text-align:center;
+    font-size:40px;
+    color:#d63384;
+    margin-bottom:25px;
+}
+
+.about p{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    color:#666;
+    line-height:1.9;
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+
+#services{
+    padding:90px 0;
+    background:#fff6fa;
+}
+
+#services h2{
+    text-align:center;
+    font-size:40px;
+    color:#d63384;
+    margin-bottom:50px;
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.service-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 35px rgba(214,51,132,.18);
+
+}
+
+.service-card h3{
+
+    color:#d63384;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.service-card p{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+#gallery{
+
+    padding:90px 0;
+
+    background:#ffffff;
+
+}
+
+#gallery h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#d63384;
+
+    margin-bottom:50px;
+
+}
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:.4s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+
+}
