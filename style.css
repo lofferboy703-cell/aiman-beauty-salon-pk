@@ -1,203 +1,183 @@
-.hero {
-    height: 90vh;
-    background-image: url("images/salon.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.hero-content {
-    background: rgba(0,0,0,0.5);
-    padding: 40px;
-    border-radius: 15px;
+html{
+    scroll-behavior:smooth;
 }
 
-.hero h1 {
-    font-size: 45px;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff9fc;
+    color:#444;
+    line-height:1.7;
 }
 
-.hero p {
-    font-size: 22px;
-    margin: 20px 0;
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.btn {
-    background: #d63384;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-}
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.gallery img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: 0.3s;
+.navbar{
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
-}
-#pricing {
-    padding: 50px 20px;
-    text-align: center;
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#d63384;
+
 }
 
-.price-box {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
 }
 
-.price-card {
-    width: 250px;
-    padding: 25px;
-    background: #fff0f5;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.nav-links li{
+
+    margin-left:30px;
+
 }
 
-.price-card h4 {
-    color: #d63384;
-    font-size: 25px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+.nav-links a:hover{
+
+    color:#d63384;
+
 }
 
-nav {
-    background: #d63384;
-    padding: 15px;
-    text-align: center;
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    height:90vh;
+
+    background:linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("images/salon.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+.hero-content{
+
+    max-width:700px;
+
+    color:#fff;
+
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
+.hero-content h1{
+
+    font-size:58px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
 }
 
-section h2 {
-    color: #d63384;
-    font-size: 35px;
-    margin-bottom: 20px;
+.hero-content p{
+
+    font-size:20px;
+
+    margin-bottom:35px;
+
 }
 
-#about p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 18px;
+.btn{
+
+    display:inline-block;
+
+    background:#d63384;
+
+    color:#fff;
+
+    padding:14px 36px;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.4s;
+
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-}
+.btn:hover{
 
-.card {
-    background: #fff0f5;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+    background:#b81d6c;
 
-.card h3 {
-    color: #d63384;
-    margin-bottom: 10px;
-}
-#reviews {
-    background: #fff0f5;
-}
+    transform:translateY(-3px);
 
-.reviews {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.review-card {
-    width: 280px;
-    padding: 25px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.review-card h3 {
-    color: #d63384;
-    margin-bottom: 15px;
-}
-
-.review-card span {
-    font-size: 22px;
-}
-#contact {
-    text-align: center;
-}
-
-.contact-box {
-    max-width: 600px;
-    margin: auto;
-    background: #fff0f5;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.contact-box h3 {
-    color: #d63384;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.contact-box p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.whatsapp:hover {
-    transform: scale(1.05);
 }
