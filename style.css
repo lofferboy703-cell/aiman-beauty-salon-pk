@@ -50,3 +50,27 @@
 .gallery img:hover {
     transform: scale(1.05);
 }
+#pricing {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.price-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    width: 250px;
+    padding: 25px;
+    background: #fff0f5;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.price-card h4 {
+    color: #d63384;
+    font-size: 25px;
+}
