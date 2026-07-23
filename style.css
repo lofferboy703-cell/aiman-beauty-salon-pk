@@ -329,3 +329,141 @@ header{
     transform:scale(1.05);
 
 }
+/* ===========================
+   PRICE SECTION
+=========================== */
+
+#pricing{
+    padding:90px 0;
+    background:#fff6fa;
+}
+
+#pricing h2{
+    text-align:center;
+    font-size:40px;
+    color:#d63384;
+    margin-bottom:50px;
+}
+
+.price-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.price-card{
+    background:#ffffff;
+    padding:35px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(214,51,132,.18);
+}
+
+.price-card h3{
+    color:#d63384;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.price-card p{
+    color:#777;
+    margin-bottom:15px;
+}
+
+.price-card h4{
+    color:#222;
+    font-size:30px;
+    font-weight:700;
+}
+
+/* ===========================
+   REVIEWS
+=========================== */
+
+#reviews{
+    padding:90px 0;
+    background:#ffffff;
+}
+
+#reviews h2{
+    text-align:center;
+    font-size:40px;
+    color:#d63384;
+    margin-bottom:50px;
+}
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.review-card{
+    background:#fff6fa;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+}
+
+.review-card h3{
+    color:#d63384;
+    margin-bottom:15px;
+}
+
+.review-card p{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.review-card span{
+    font-size:20px;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+#contact{
+    padding:90px 0;
+    background:#fff6fa;
+}
+
+#contact h2{
+    text-align:center;
+    font-size:40px;
+    color:#d63384;
+    margin-bottom:50px;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:#ffffff;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-box h3{
+    color:#d63384;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.contact-box p{
+    font-size:17px;
+    color:#666;
+    margin:12px 0;
+}
