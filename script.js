@@ -1,38 +1,55 @@
-// Mobile Menu
+// ===========================
+// MOBILE MENU
+// ===========================
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if(menuToggle && navLinks){
 
-// Close Menu After Clicking a Link
+    menuToggle.addEventListener("click", () => {
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+        navLinks.classList.toggle("active");
+
     });
-});
-/* ===================================
-   WHATSAPP APPOINTMENT BOOKING
-=================================== */
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+
+// ===========================
+// WHATSAPP APPOINTMENT BOOKING
+// ===========================
 
 const appointmentForm = document.getElementById("appointmentForm");
 
-appointmentForm.addEventListener("submit", function(e){
+if(appointmentForm){
 
-    e.preventDefault();
+    appointmentForm.addEventListener("submit", function(e){
 
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const email = document.getElementById("email").value;
-    const service = document.getElementById("service").value;
-    const date = document.getElementById("date").value;
-    const time = document.getElementById("time").value;
-    const message = document.getElementById("message").value;
+        e.preventDefault();
 
-    const whatsappMessage =
+
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const service = document.getElementById("service").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const message = document.getElementById("message").value;
+
+
+        const whatsappMessage =
 `🌸 *New Appointment Booking*
 
 👤 Name: ${name}
@@ -50,90 +67,157 @@ appointmentForm.addEventListener("submit", function(e){
 📝 Message:
 ${message}`;
 
-    const whatsappURL =
+
+        const whatsappURL =
 `https://wa.me/923174369286?text=${encodeURIComponent(whatsappMessage)}`;
 
-    window.open(whatsappURL, "_blank");
 
-});
-/* ===================================
-   LIGHTBOX GALLERY
-=================================== */
+        window.open(whatsappURL, "_blank");
+
+
+    });
+
+}
+
+
+// ===========================
+// LIGHTBOX GALLERY
+// ===========================
 
 const galleryImages = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeLightbox = document.getElementById("close-lightbox");
 
-galleryImages.forEach((image) => {
 
-    image.addEventListener("click", () => {
+if(lightbox && lightboxImg && closeLightbox){
 
-        lightbox.classList.add("active");
+    galleryImages.forEach((image) => {
 
-        lightboxImg.src = image.src;
+        image.addEventListener("click", () => {
 
-        lightboxImg.alt = image.alt;
+            lightbox.classList.add("active");
+
+            lightboxImg.src = image.src;
+
+            lightboxImg.alt = image.alt;
+
+        });
 
     });
 
-});
 
-closeLightbox.addEventListener("click", () => {
-
-    lightbox.classList.remove("active");
-
-});
-
-lightbox.addEventListener("click", (e) => {
-
-    if(e.target === lightbox){
+    closeLightbox.addEventListener("click", () => {
 
         lightbox.classList.remove("active");
 
-    }
+    });
 
-});
 
-document.addEventListener("keydown", (e) => {
+    lightbox.addEventListener("click", (e) => {
 
-    if(e.key === "Escape"){
+        if(e.target === lightbox){
 
-        lightbox.classList.remove("active");
+            lightbox.classList.remove("active");
 
-    }
+        }
 
-});
+    });
+
+
+    document.addEventListener("keydown", (e) => {
+
+        if(e.key === "Escape"){
+
+            lightbox.classList.remove("active");
+
+        }
+
+    });
+
+}
+
+
 // ===========================
 // BACK TO TOP BUTTON
 // ===========================
 
-let backToTop = document.getElementById("backToTop");
+const backToTop = document.getElementById("backToTop");
 
 
-window.onscroll = function(){
+if(backToTop){
 
-    if(document.documentElement.scrollTop > 300){
-
-        backToTop.style.display = "block";
-
-    } else {
-
-        backToTop.style.display = "none";
-
-    }
-
-};
+    window.addEventListener("scroll", () => {
 
 
-backToTop.onclick = function(){
+        if(document.documentElement.scrollTop > 300){
 
-    window.scrollTo({
+            backToTop.style.display = "block";
 
-        top: 0,
+        }else{
 
-        behavior: "smooth"
+            backToTop.style.display = "none";
+
+        }
+
 
     });
 
-};
+
+    backToTop.addEventListener("click", () => {
+
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+
+    });
+
+}
+
+
+// ===========================
+// SCROLL ANIMATION
+// ===========================
+
+const sections = document.querySelectorAll(
+"section, .card, .price-card, .review-card"
+);
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+
+    entries.forEach(entry=>{
+
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+
+        }
+
+
+    });
+
+
+},{
+
+
+    threshold:0.15
+
+
+});
+
+
+sections.forEach(section=>{
+
+    observer.observe(section);
+
+});
