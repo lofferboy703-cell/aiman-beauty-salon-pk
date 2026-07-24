@@ -1,11 +1,12 @@
-/* ===========================
+/* ===================================
    GOOGLE FONT
-=========================== */
+=================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* ===========================
+/* ===================================
    RESET
-=========================== */
+=================================== */
 
 *{
     margin:0;
@@ -24,9 +25,9 @@ body{
     line-height:1.7;
 }
 
-/* ===========================
+/* ===================================
    CONTAINER
-=========================== */
+=================================== */
 
 .container{
     width:90%;
@@ -34,570 +35,106 @@ body{
     margin:auto;
 }
 
-/* ===========================
+/* ===================================
    NAVBAR
-=========================== */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+=================================== */
 
 .navbar{
-
+    position:sticky;
+    top:0;
+    z-index:999;
     background:#ffffff;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:18px 8%;
-
     box-shadow:0 2px 15px rgba(0,0,0,.08);
-
 }
 
 .logo{
-
     font-size:28px;
-
     font-weight:700;
-
     color:#d63384;
-
 }
 
 .nav-links{
-
     display:flex;
-
     list-style:none;
-
 }
 
 .nav-links li{
-
     margin-left:30px;
-
 }
 
 .nav-links a{
-
     text-decoration:none;
-
     color:#333;
-
     font-weight:500;
-
     transition:.3s;
-
 }
 
-.nav-links a:hover{
-
+.nav-links a:hover,
+.nav-links a.active{
     color:#d63384;
-
 }
 
-/* ===========================
-   HERO SECTION
-=========================== */
+/* ===================================
+   MOBILE MENU BUTTON
+=================================== */
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#d63384;
+}
+
+/* ===================================
+   HERO
+=================================== */
 
 .hero{
-
     height:90vh;
-
-    background:linear-gradient(rgba(0,0,0,.45),
+    background:
+    linear-gradient(rgba(0,0,0,.45),
     rgba(0,0,0,.45)),
     url("images/salon.jpg");
 
     background-size:cover;
-
     background-position:center;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
 }
 
 .hero-content{
-
-    max-width:700px;
-
     color:#fff;
-
+    max-width:700px;
 }
 
 .hero-content h1{
-
-    font-size:58px;
-
+    font-size:60px;
     margin-bottom:20px;
-
-    font-weight:700;
-
 }
 
 .hero-content p{
-
-    font-size:20px;
-
+    font-size:22px;
     margin-bottom:35px;
-
 }
 
 .btn{
-
     display:inline-block;
-
     background:#d63384;
-
     color:#fff;
-
-    padding:14px 36px;
-
     text-decoration:none;
-
+    padding:15px 35px;
     border-radius:50px;
-
-    font-weight:600;
-
-    transition:.4s;
-
+    transition:.3s;
 }
 
 .btn:hover{
-
     background:#b81d6c;
-
     transform:translateY(-3px);
-
-}
-/* ===========================
-   ABOUT SECTION
-=========================== */
-
-.about{
-    padding:90px 0;
-    background:#ffffff;
-}
-
-.about h2{
-    text-align:center;
-    font-size:40px;
-    color:#d63384;
-    margin-bottom:25px;
-}
-
-.about p{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-    font-size:18px;
-    color:#666;
-    line-height:1.9;
-}
-
-/* ===========================
-   SERVICES
-=========================== */
-
-#services{
-    padding:90px 0;
-    background:#fff6fa;
-}
-
-#services h2{
-    text-align:center;
-    font-size:40px;
-    color:#d63384;
-    margin-bottom:50px;
-}
-
-.services-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:30px;
-
-}
-
-.service-card{
-
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:18px;
-
-    text-align:center;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-    transition:.4s;
-
-}
-
-.service-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 15px 35px rgba(214,51,132,.18);
-
-}
-
-.service-card h3{
-
-    color:#d63384;
-
-    margin-bottom:15px;
-
-    font-size:24px;
-
-}
-
-.service-card p{
-
-    color:#666;
-
-    font-size:16px;
-
-}
-
-/* ===========================
-   GALLERY
-=========================== */
-
-#gallery{
-
-    padding:90px 0;
-
-    background:#ffffff;
-
-}
-
-#gallery h2{
-
-    text-align:center;
-
-    font-size:40px;
-
-    color:#d63384;
-
-    margin-bottom:50px;
-
-}
-
-.gallery{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:20px;
-
-}
-
-.gallery img{
-
-    width:100%;
-
-    height:280px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-    transition:.4s;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-.gallery img:hover{
-
-    transform:scale(1.05);
-
-}
-/* ===========================
-   PRICE SECTION
-=========================== */
-
-#pricing{
-    padding:90px 0;
-    background:#fff6fa;
-}
-
-#pricing h2{
-    text-align:center;
-    font-size:40px;
-    color:#d63384;
-    margin-bottom:50px;
-}
-
-.price-box{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.price-card{
-    background:#ffffff;
-    padding:35px;
-    text-align:center;
-    border-radius:18px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-    transition:.4s;
-}
-
-.price-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 35px rgba(214,51,132,.18);
-}
-
-.price-card h3{
-    color:#d63384;
-    margin-bottom:15px;
-    font-size:24px;
-}
-
-.price-card p{
-    color:#777;
-    margin-bottom:15px;
-}
-
-.price-card h4{
-    color:#222;
-    font-size:30px;
-    font-weight:700;
-}
-
-/* ===========================
-   REVIEWS
-=========================== */
-
-#reviews{
-    padding:90px 0;
-    background:#ffffff;
-}
-
-#reviews h2{
-    text-align:center;
-    font-size:40px;
-    color:#d63384;
-    margin-bottom:50px;
-}
-
-.reviews{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.review-card{
-    background:#fff6fa;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    transition:.4s;
-}
-
-.review-card:hover{
-    transform:translateY(-8px);
-}
-
-.review-card h3{
-    color:#d63384;
-    margin-bottom:15px;
-}
-
-.review-card p{
-    color:#666;
-    margin-bottom:15px;
-}
-
-.review-card span{
-    font-size:20px;
-}
-
-/* ===========================
-   CONTACT
-=========================== */
-
-#contact{
-    padding:90px 0;
-    background:#fff6fa;
-}
-
-#contact h2{
-    text-align:center;
-    font-size:40px;
-    color:#d63384;
-    margin-bottom:50px;
-}
-
-.contact-box{
-    max-width:700px;
-    margin:auto;
-    background:#ffffff;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.contact-box h3{
-    color:#d63384;
-    margin-bottom:20px;
-    font-size:28px;
-}
-
-.contact-box p{
-    font-size:17px;
-    color:#666;
-    margin:12px 0;
-}
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-    background:#222;
-    color:#ffffff;
-    text-align:center;
-    padding:25px 10%;
-}
-
-footer p{
-    font-size:15px;
-    letter-spacing:0.5px;
-}
-
-/* ===========================
-   WHATSAPP BUTTON
-=========================== */
-
-.whatsapp{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:#ffffff;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:28px;
-    font-weight:bold;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-    transition:.3s;
-    z-index:999;
-}
-
-.whatsapp:hover{
-    transform:scale(1.1);
-}
-
-/* ===========================
-   SECTION SPACING
-=========================== */
-
-section{
-    padding-left:8%;
-    padding-right:8%;
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media(max-width:992px){
-
-    .navbar{
-        flex-direction:column;
-        padding:20px;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-        margin-top:15px;
-    }
-
-    .nav-links li{
-        margin:10px;
-    }
-
-    .hero-content h1{
-        font-size:42px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .hero{
-        height:75vh;
-    }
-
-    .hero-content h1{
-        font-size:34px;
-    }
-
-    .hero-content p{
-        font-size:17px;
-    }
-
-    .btn{
-        padding:12px 28px;
-    }
-
-    .about h2,
-    #services h2,
-    #gallery h2,
-    #pricing h2,
-    #reviews h2,
-    #contact h2{
-        font-size:32px;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .logo{
-        font-size:22px;
-    }
-
-    .hero-content h1{
-        font-size:28px;
-    }
-
-    .hero-content p{
-        font-size:15px;
-    }
-
-    .whatsapp{
-        width:55px;
-        height:55px;
-        font-size:24px;
-    }
-
-}
-.nav-links a.active{
-    color:#d63384;
-    font-weight:700;
 }
