@@ -663,3 +663,28 @@ footer p{
     color:#d63384;
 
 }
+/* ===========================
+   GOOGLE MAP STYLE
+=========================== */
+
+.map-box{
+
+    margin-top:40px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.map-box iframe{
+
+    width:100%;
+
+    height:400px;
+
+    display:block;
+
+}
