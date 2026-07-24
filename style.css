@@ -899,3 +899,46 @@ footer{
     }
 
 }
+/* ===========================
+   SOCIAL ICONS STYLE
+=========================== */
+
+.social-icons{
+
+    margin-top:20px;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+.social-icons a{
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:0.3s;
+
+}
+
+
+.social-icons a:hover{
+
+    transform:translateY(-5px);
+
+}
