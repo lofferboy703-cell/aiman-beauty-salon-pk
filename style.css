@@ -555,3 +555,43 @@ footer p{
     outline:none;
     transition:.3s;
 }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#d63384;
+    box-shadow:0 0 10px rgba(214,51,132,.20);
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:140px;
+}
+
+.appointment-form .btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:600;
+    padding:16px;
+}
+
+.appointment-form .btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .appointment-form{
+        padding:25px;
+    }
+
+    #appointment h2{
+        font-size:34px;
+    }
+
+}
