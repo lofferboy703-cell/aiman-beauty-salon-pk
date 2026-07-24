@@ -744,3 +744,79 @@ section,
     transform:translateY(0);
 
 }
+/* ===========================
+   OPENING HOURS STYLE
+=========================== */
+
+#hours{
+
+    text-align:center;
+
+}
+
+
+.hours-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+
+.hours-item{
+
+    padding:25px;
+
+    width:280px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+
+    background:#fff;
+
+}
+
+
+.hours-item h3{
+
+    margin-bottom:10px;
+
+}
+
+
+.hours-item p{
+
+    font-size:18px;
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .hours-box{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+    .hours-item{
+
+        width:90%;
+
+    }
+
+}
