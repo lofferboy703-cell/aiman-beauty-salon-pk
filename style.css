@@ -138,3 +138,81 @@ body{
     background:#b81d6c;
     transform:translateY(-3px);
 }
+/* ===================================
+   ABOUT SECTION
+=================================== */
+
+.about{
+    padding:90px 0;
+    background:#ffffff;
+}
+
+.about h2{
+    text-align:center;
+    font-size:42px;
+    color:#d63384;
+    margin-bottom:25px;
+}
+
+.about p{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+    font-size:18px;
+    color:#666;
+    line-height:1.9;
+}
+
+/* ===================================
+   SERVICES
+=================================== */
+
+#services{
+    padding:90px 0;
+    background:#fff4f8;
+}
+
+#services h2{
+    text-align:center;
+    font-size:42px;
+    color:#d63384;
+    margin-bottom:50px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:all .35s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(214,51,132,.18);
+}
+
+.service-card i{
+    font-size:50px;
+    color:#d63384;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:24px;
+    color:#222;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:#666;
+    font-size:16px;
+    line-height:1.7;
+}
